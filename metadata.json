@@ -1,0 +1,6 @@
+{
+  "name": "Sablon Kaos & Mockup Studio",
+  "description": "Landing page sistem pre-order sablon kaos DTF & Manual dengan fitur interactive live mockup preview kustom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #ffffff;
+    --bg-subtle: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-subtle: #e2e8f0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+  }
+
+  /* Keep the conversion path focused: navbar, hero and order form. */
+  #order-form button[type="submit"] { background-color: #c2410c; }
+  #order-form button[type="submit"]:hover { background-color: #9a3412; }
+}
+
+/* Accessible reading scale: 16 → 18 → 29 → 47px, close to a 1.618 ratio. */
+@layer utilities {
+  .text-xs { font-size: 0.875rem; line-height: 1.45; }
+  .text-\[11px\] { font-size: 0.8125rem; line-height: 1.45; }
+  .text-sm { font-size: 0.9375rem; line-height: 1.55; }
+}
+
+#layanan article > a,
+#cara-order .mt-8 a { display: none; }
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
