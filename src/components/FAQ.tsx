@@ -4,7 +4,7 @@ import { FAQS } from '../data/content';
 export default function FAQ() {
   return (
     <section id="faq" className="py-20 md:py-28 bg-white text-slate-900 border-b border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center mb-14">
