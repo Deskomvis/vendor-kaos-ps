@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/assets/logo-gudang-planet-produksi.webp" alt="Gudang Planet" width="128" height="64" loading="lazy" decoding="async" className="w-20 h-10 object-contain" />
+              <img src="/assets/logo-gudang-planet-produksi.webp" alt="Gudang Planet" width="160" height="80" loading="lazy" decoding="async" className="w-28 h-14 object-contain" />
               <span className="font-extrabold text-lg tracking-tight text-white font-['Space_Grotesk']">Produksi</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
