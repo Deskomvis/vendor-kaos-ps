@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="mt-8"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#168a4a] px-6 text-sm font-bold text-white transition hover:bg-[#11713d] focus-visible:outline-white"><MessageCircle className="h-4 w-4" aria-hidden="true" /> Konsultasi Gratis <ArrowRight className="h-4 w-4" aria-hidden="true" /></a></div>
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs text-neutral-300">{['Mulai 1 pcs', 'Proofing sebelum cetak', 'Garansi produksi'].map((item) => <span key={item} className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-white" aria-hidden="true" />{item}</span>)}</div>
         </div>
-        <div className="relative -mx-4 sm:-mx-8 lg:-mr-24 lg:ml-0" aria-hidden="true"><div className="absolute inset-8 rounded-full bg-white/10 blur-3xl" /><img src="/assets/hero-image.webp" alt="" width="768" height="512" fetchPriority="high" decoding="async" className="relative mx-auto w-full max-w-3xl scale-110 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,.45)] sm:scale-105 lg:max-w-none lg:scale-110" /></div>
+        <div className="relative -mx-4 sm:-mx-8 lg:-mr-24 lg:ml-0" aria-hidden="true"><div className="absolute inset-8 rounded-full bg-white/10 blur-3xl" /><img src="/assets/hero-image-480.webp" alt="" width="480" height="320" fetchPriority="high" decoding="async" className="relative mx-auto w-full max-w-3xl scale-110 object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,.45)] sm:scale-105 lg:max-w-none lg:scale-110" /></div>
       </div>
     </section>
   );
