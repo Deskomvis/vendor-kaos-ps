@@ -22,7 +22,6 @@ export default function App() {
         <Hero />
 
         <BrandIntro />
-        <ClientProof />
 
         <DtfPriceList />
 
@@ -39,6 +38,7 @@ export default function App() {
 
         {/* 6. Portfolio & Client Production Gallery */}
         <PortfolioGallery />
+        <ClientProof />
 
         {/* 7. FAQ Section using native <details> & <summary> accordion */}
         <FAQ />
