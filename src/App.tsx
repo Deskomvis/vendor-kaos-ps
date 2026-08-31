@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import BrandIntro from './components/BrandIntro';
 import ClientProof from './components/ClientProof';
 import OrderForm from './components/OrderForm';
-import DtfPriceList from './components/DtfPriceList';
 import ServiceComparison from './components/ServiceComparison';
 import HowToOrder from './components/HowToOrder';
 import PortfolioGallery from './components/PortfolioGallery';
@@ -22,8 +21,6 @@ export default function App() {
         <Hero />
 
         <BrandIntro />
-
-        <DtfPriceList />
 
         {/* 2. Short order specification form */}
         <OrderForm />
