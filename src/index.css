@@ -29,7 +29,6 @@
   /* Keep the conversion path focused: navbar, hero and order form. */
   #order-form button[type="submit"] { background-color: #c2410c; }
   #order-form button[type="submit"]:hover { background-color: #9a3412; }
-  #order-form label:has(input[value="back"]) { display: none; }
 }
 
 /* Accessible reading scale: 16 → 18 → 29 → 47px, close to a 1.618 ratio. */
