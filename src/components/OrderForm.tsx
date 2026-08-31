@@ -10,18 +10,19 @@ const prints = [
   { id: 'a3', name: 'Sablon A3', dimensions: '28 × 40 cm', image: '/assets/sablon%20a3.webp' },
 ];
 const prices: Record<string, Record<string, number>> = { 'cotton-30s': { logo: 36000, a5: 38000, a4: 43000, a3: 49500 }, 'cotton-24s': { logo: 40500, a5: 42800, a4: 47800, a3: 54000 } };
+const backSurcharges: Record<string, number> = { logo: 4000, a5: 6000, a4: 11000, a3: 17000 };
 
 export default function OrderForm() {
   const [material, setMaterial] = useState('cotton-30s');
   const [frontPrint, setFrontPrint] = useState('logo');
   const [backPrint, setBackPrint] = useState('logo');
-  const [sides, setSides] = useState<'front' | 'back' | 'front-back'>('front');
+  const [sides, setSides] = useState<'front' | 'front-back'>('front');
   const [longSleeveQuantity, setLongSleeveQuantity] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const quantity = 1;
   const front = prices[material][frontPrint];
-  const back = prices[material][backPrint];
-  const printTotal = sides === 'front-back' ? front + back : sides === 'back' ? back : front;
+  const back = backSurcharges[backPrint];
+  const printTotal = sides === 'front-back' ? front + back : front;
   const total = printTotal + longSleeveQuantity * 5000;
   const selected = (id: string) => prints.find((item) => item.id === id) || prints[0];
   const card = (id: string, setId: (value: string) => void, label: string) => <div className="mt-3"><p className="text-xs font-bold text-neutral-600">{label}</p><div className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-4">{prints.map((item) => <button key={`${label}-${item.id}`} type="button" onClick={() => setId(item.id)} aria-pressed={id === item.id} className={`overflow-hidden rounded-2xl border-2 bg-white text-left transition hover:border-red-700 ${id === item.id ? 'border-red-700 ring-2 ring-red-700/20' : 'border-neutral-200'}`}><img src={item.image} alt={item.name} className="aspect-square w-full object-cover" /><span className="block p-3"><span className="block text-sm font-black">{item.name}</span><span className="mt-1 block text-xs text-neutral-500">{item.dimensions}</span></span></button>)}</div><p className="mt-2 text-xs text-neutral-500">Dipilih: <span className="font-bold text-neutral-950">{selected(id).name} · Rp {prices[material][id].toLocaleString('id-ID')}</span></p></div>;
