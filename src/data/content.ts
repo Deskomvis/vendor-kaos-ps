@@ -103,7 +103,7 @@ export const SERVICES: ServiceDetail[] = [
     tag: 'Tanpa Minimal Order (Bisa 1 Pcs)',
     badge: 'Paling Populer untuk Satuan & Sample',
     minOrder: 'Mulai 1 Pcs',
-    priceRange: 'Rp 55.000 - Rp 85.000 / pcs',
+    priceRange: 'Rp 36.000 - Rp 75.000 / pcs',
     productionTime: '1 - 3 Hari Kerja (Kilat)',
     features: [
       'Bebas full color, foto, gradasi kompleks tanpa batas warna',
