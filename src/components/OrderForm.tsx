@@ -10,7 +10,7 @@ const prints = [
   { id: 'a3', name: 'Sablon A3', dimensions: '28 × 40 cm', image: '/assets/sablon%20a3.webp' },
 ];
 const prices: Record<string, Record<string, number>> = { 'cotton-30s': { logo: 36000, a5: 38000, a4: 43000, a3: 49500 }, 'cotton-24s': { logo: 40500, a5: 42800, a4: 47800, a3: 54000 } };
-const backSurcharges: Record<string, number> = { logo: 4000, a5: 6000, a4: 11000, a3: 17000 };
+const backSurcharges: Record<string, number> = { logo: 6000, a5: 8000, a4: 13000, a3: 19000 };
 const backImages: Record<string, string> = { logo: '/assets/Belakang-logo.webp', a5: '/assets/Belakang-A5.webp', a4: '/assets/Belakang-A4.webp', a3: '/assets/Belakang-A3.webp' };
 
 export default function OrderForm() {
