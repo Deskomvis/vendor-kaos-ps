@@ -10,8 +10,8 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/assets/logo%20PS)%20(1).webp" alt="Planet Store" width="128" height="96" loading="lazy" decoding="async" className="w-16 h-12 object-contain" />
-              <span className="font-extrabold text-lg tracking-tight text-white font-['Space_Grotesk']">Planet Store</span>
+              <img src="/assets/logo-gudang-planet-produksi.webp" alt="Gudang Planet" width="128" height="64" loading="lazy" decoding="async" className="w-20 h-10 object-contain" />
+              <span className="font-extrabold text-lg tracking-tight text-white font-['Space_Grotesk']">Produksi</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
               Layanan sablon kaos berkualitas tinggi. Melayani cetak presisi DTF satuan tanpa minimal order serta produksi sablon manual untuk brand, merchandise musisi, dan event.

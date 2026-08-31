@@ -33,12 +33,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-2.5 group" aria-label="Beranda Planet Store">
-            <img src="/assets/logo%20PS)%20(1).webp" alt="Planet Store" width="96" height="72" decoding="async" className="w-12 h-10 object-contain" />
+          <a href="#" className="flex items-center gap-2.5 group" aria-label="Beranda Gudang Planet Produksi">
+            <img src="/assets/logo-gudang-planet-produksi.webp" alt="Gudang Planet" width="128" height="64" decoding="async" className="w-20 h-10 object-contain" />
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-lg tracking-tight text-slate-900 font-['Space_Grotesk']">
-                  Planet <span className="text-amber-600">Store</span>
+                  Produksi
                 </span>
                 <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-[11px] font-semibold rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
                   <CheckCircle2 className="w-3 h-3 text-emerald-600" aria-hidden="true" /> Slot Open
