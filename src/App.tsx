@@ -7,7 +7,6 @@ import ServiceComparison from './components/ServiceComparison';
 import BrandProductionCards from './components/BrandProductionCards';
 import HowToOrder from './components/HowToOrder';
 import PortfolioGallery from './components/PortfolioGallery';
-import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import AdminDashboard from './components/AdminDashboard';
 
@@ -41,8 +40,6 @@ export default function App() {
         <PortfolioGallery />
         <ClientProof />
 
-        {/* 7. FAQ Section using native <details> & <summary> accordion */}
-        <FAQ />
       </main>
 
       {/* WhatsApp CTA tersedia melalui navbar, hero, dan form order */}
