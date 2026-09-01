@@ -4,6 +4,7 @@ import BrandIntro from './components/BrandIntro';
 import ClientProof from './components/ClientProof';
 import OrderForm from './components/OrderForm';
 import ServiceComparison from './components/ServiceComparison';
+import BrandProductionCards from './components/BrandProductionCards';
 import HowToOrder from './components/HowToOrder';
 import PortfolioGallery from './components/PortfolioGallery';
 import FAQ from './components/FAQ';
@@ -27,6 +28,7 @@ export default function App() {
 
         {/* 3. Service Comparison: Sablon DTF vs Sablon Manual */}
         <ServiceComparison />
+        <BrandProductionCards />
 
         {/* 4. Interactive Instant Price & Discount Calculator */}
 
