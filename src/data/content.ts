@@ -158,42 +158,42 @@ export const ORDER_STEPS: OrderStep[] = [
   {
     stepNumber: 1,
     title: 'Siapkan File Desain',
-    description: 'Kirim file PNG transparan, AI, PSD, atau PDF. Belum punya desain? Tim kami siap membantu.',
+    description: 'Kirim desain atau referensi yang ingin diproduksi.',
     tip: 'Belum punya desain fix? Tim kami siap bantu layout gratis!',
     iconName: 'Sparkles'
   },
   {
     stepNumber: 2,
     title: 'Pilih Bahan Kaos & Jenis Sablon',
-    description: 'Tentukan pilihan bahan kaos (Cotton Combed 30s, 24s, Heavyweight 20s) serta teknik cetak (DTF satuan atau Sablon Manual partai).',
+    description: 'Pilih bahan kaos dan teknik sablon sesuai kebutuhan.',
     tip: 'Bisa bawa kaos sendiri jika hanya ingin press cetak.',
     iconName: 'Shirt'
   },
   {
     stepNumber: 3,
     title: 'Konsultasi WhatsApp & Pembayaran DP',
-    description: 'Kirim rincian order via tombol WhatsApp. Kami berikan invoice resmi, rincian biaya transparan, dan lakukan pembayaran DP 50%.',
+    description: 'Konfirmasi detail pesanan dan lakukan pembayaran DP.',
     tip: 'Fast response setiap hari pkl 08.00 - 22.00 WIB.',
     iconName: 'MessageCircle'
   },
   {
     stepNumber: 4,
     title: 'Digital Proofing & Proses Produksi',
-    description: 'Kami kirim preview desain akhir untuk persetujuan sebelum dicetak. Setelah setuju, proses produksi dimulai.',
+    description: 'Setujui preview desain sebelum proses produksi dimulai.',
     tip: 'Pengerjaan transparan dengan update foto proses produksi.',
     iconName: 'Layers'
   },
   {
     stepNumber: 5,
     title: 'Quality Check & Pengiriman Aman',
-    description: 'Kaos yang telah selesai di-press uap, difold rapi per plastik, dan dikirim ke alamatmu dengan ekspedisi pilihan ke seluruh Indonesia.',
+    description: 'Pesanan dicek, dikemas rapi, lalu dikirim ke seluruh Indonesia.',
     tip: 'Tersedia garansi 100% cetak ulang bila ada cacat produksi.',
     iconName: 'Truck'
   },
   {
     stepNumber: 6,
     title: 'Pesanan Diterima',
-    description: 'Pesanan sampai dengan aman dan siap digunakan atau dibagikan.',
+    description: 'Pesanan tiba dengan aman dan siap digunakan atau dijual.',
     tip: 'Simpan kontak kami untuk repeat order berikutnya.',
     iconName: 'CheckCircle2'
   }

@@ -57,11 +57,6 @@ export default function HowToOrder() {
                         {step.description}
                       </p>
 
-                      <div className="p-2 rounded-lg bg-white border border-slate-200 text-[11px] text-slate-700 flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
-                        <span>{step.tip}</span>
-                      </div>
-                      <div className="mt-auto flex items-center gap-2 pt-3 text-[11px] font-bold uppercase tracking-wider text-slate-500"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-white">{step.stepNumber}</span><span>Langkah {step.stepNumber} dari 6</span></div>
                     </div>
                     {idx < ORDER_STEPS.length - 1 && idx !== 2 && <ArrowRight className="absolute -right-3 top-1/2 z-10 hidden h-6 w-6 -translate-y-1/2 rounded-full bg-white p-1 text-slate-500 shadow md:block" aria-hidden="true" />}
                 </article>
