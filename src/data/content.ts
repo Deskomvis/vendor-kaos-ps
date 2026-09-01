@@ -1,7 +1,7 @@
 import { TShirtColor, PrintSizePreset, SampleArtwork, ServiceDetail, OrderStep, PortfolioItem, FAQItem } from '../types';
 
 export const WHATSAPP_CONFIG = {
-  phoneNumber: "6281234567890",
+  phoneNumber: "6282113333354",
   formattedNumber: "+62 812-3456-7890",
   defaultMessage: "Halo Planet Store, saya ingin konsultasi tentang pre-order sablon kaos.\n\nSaya ingin mendapatkan informasi harga dan proses order.",
   studioMessageTemplate: (color: string, side: string, size: string, qty: number) => 

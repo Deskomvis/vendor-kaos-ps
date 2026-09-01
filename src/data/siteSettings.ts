@@ -14,7 +14,7 @@ export const defaultSiteSettings: SiteSettings = {
   heroHighlight: 'Brand Sendiri.',
   heroDescription: 'Partner produksi terpercaya untuk clothing brand dan toko grosir. Wujudkan kaos berkualitas dengan harga yang ramah untuk modal usaha.',
   heroCta: 'Konsultasi Gratis',
-  whatsappNumber: '6281234567890',
+  whatsappNumber: '6282113333354',
   whatsappLabel: 'Konsultasi via WhatsApp',
 };
 
