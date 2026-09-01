@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MessageCircle, X, Send, Sparkles } from 'lucide-react';
-import { WHATSAPP_CONFIG } from '../data/content';
+import { getNextWhatsAppNumber, WHATSAPP_CONFIG } from '../data/content';
 
 export default function FloatingWhatsApp() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +8,7 @@ export default function FloatingWhatsApp() {
 
   const handleSendMessage = () => {
     const messageToSend = customMsg.trim() || WHATSAPP_CONFIG.defaultMessage;
-    const url = `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodeURIComponent(messageToSend)}`;
+    const url = `https://wa.me/${getNextWhatsAppNumber()}?text=${encodeURIComponent(messageToSend)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     setIsOpen(false);
     setCustomMsg('');

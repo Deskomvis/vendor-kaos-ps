@@ -8,6 +8,14 @@ export const WHATSAPP_CONFIG = {
     `Halo Planet Store! Saya sudah membuat mockup di website:\n- Warna Kaos: ${color}\n- Posisi: ${side}\n- Ukuran Cetak: ${size}\n- Estimasi Jumlah: ${qty} pcs\n\nMohon info harga fix dan cara kirim file desain resolusi tingginya ya.`
 };
 
+export const WHATSAPP_ROTATOR_NUMBERS = ['6282113333354', '6285724603103', '6285793800383', '6287775121412', '6287740991337'];
+const WHATSAPP_ROTATOR_KEY = 'gudang-planet-whatsapp-rotator-index';
+export function getNextWhatsAppNumber() {
+  const current = Number.parseInt(localStorage.getItem(WHATSAPP_ROTATOR_KEY) || '0', 10) || 0;
+  localStorage.setItem(WHATSAPP_ROTATOR_KEY, String((current + 1) % WHATSAPP_ROTATOR_NUMBERS.length));
+  return WHATSAPP_ROTATOR_NUMBERS[current % WHATSAPP_ROTATOR_NUMBERS.length];
+}
+
 export const TSHIRT_COLORS: TShirtColor[] = [
   { id: 'white', name: 'Putih Bersih (Solid White)', hex: '#F9FAFB', textColor: 'dark', highlightHex: '#FFFFFF', shadowHex: '#E5E7EB' },
   { id: 'black', name: 'Hitam Pekat (Jet Black)', hex: '#18181B', textColor: 'light', highlightHex: '#27272A', shadowHex: '#09090B' },

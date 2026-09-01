@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { ArrowRight, MessageCircle, Send } from 'lucide-react';
-import { WHATSAPP_CONFIG } from '../data/content';
+import { getNextWhatsAppNumber, WHATSAPP_CONFIG } from '../data/content';
 
 const materials = [{ id: 'cotton-30s', name: 'Cotton 30s' }, { id: 'cotton-24s', name: 'Cotton 24s' }];
 const prints = [{ id: 'logo', name: 'Sablon Logo', dimensions: '10 × 10 cm', image: '/assets/sablon%20logo.webp' }, { id: 'a5', name: 'Sablon A5', dimensions: '15 × 21 cm', image: '/assets/sablon%20a5.webp' }, { id: 'a4', name: 'Sablon A4', dimensions: '20 × 30 cm', image: '/assets/sablon%20a4.webp' }, { id: 'a3', name: 'Sablon A3', dimensions: '28 × 40 cm', image: '/assets/sablon%20a3.webp' }];
