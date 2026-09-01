@@ -41,6 +41,8 @@
 #layanan article > a,
 #cara-order .mt-8 a { display: none; }
 
+#layanan article > div.mt-6 > div:has(strong:empty) { display: none; }
+
 /* Custom minimal scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
