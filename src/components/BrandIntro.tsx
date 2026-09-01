@@ -1,9 +1,9 @@
 import { Clock3, Palette, ShieldCheck } from 'lucide-react';
 
 const benefits = [
-  { icon: Palette, title: 'Kualitas sablon terjaga', text: 'Warna solid, detail tajam, dan pilihan teknik sesuai kebutuhan.' },
-  { icon: Clock3, title: 'Proses jelas & tepat waktu', text: 'Proofing dilakukan sebelum produksi dimulai.' },
-  { icon: ShieldCheck, title: 'Aman untuk kebutuhan bisnis', text: 'QC setiap pesanan dan garansi cacat produksi.' },
+  { icon: Palette, title: 'Sablon berkualitas', text: 'Pilih teknik plastisol, raster, atau DTF sesuai karakter brand Anda.' },
+  { icon: Clock3, title: 'Aksesoris lengkap gratis', text: 'Sudah termasuk hangtag, label pundak, dan label woven bawah.' },
+  { icon: ShieldCheck, title: 'Produksi rapi & cepat', text: 'Dikerjakan tenaga ahli dengan proses jelas hingga siap dikirim.' },
 ];
 
 export default function BrandIntro() {
