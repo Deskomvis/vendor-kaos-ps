@@ -1,6 +1,6 @@
 const cards = [
-  { image: '/assets/bikin-brand-minimal-5-roll-bahan.jpeg', title: 'Mulai brand kaosmu', text: 'Cocok untuk brand lokal pemula maupun pro.', alt: 'Promosi produksi brand kaos minimal lima roll bahan' },
-  { image: '/assets/bikin-brand-punya-brand-sendiri.jpeg', title: 'Punya brand sendiri', text: 'Bahan berkualitas, sablon rapi, dan aksesoris gratis.', alt: 'Promosi pembuatan brand pakaian sendiri' },
+  { image: '/assets/%20Image%20Sep%201,%202026,%2012_08_58%20PM%20(2).webp', title: 'Buat brand kaosmu sendiri', text: 'Cocok untuk brand lokal pemula maupun profesional. Modal mulai Rp38.000/pcs, PO minimal 5 roll bahan, free accessories, dan sablon plastisol.', alt: 'Promosi produksi brand kaos untuk brand lokal' },
+  { image: '/assets/%20Image%20Sep%201,%202026,%2012_08_58%20PM%20(1).webp', title: 'Bikin brand, punya brand sendiri', text: 'Solusi owner toko grosir: modal mulai Rp28.000/pcs, minimal 20 roll, bebas request motif, dan pilihan teknik sablon berkualitas.', alt: 'Promosi produksi brand kaos untuk owner toko grosir' },
 ];
 
 export default function BrandProductionCards() {
