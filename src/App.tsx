@@ -8,10 +8,10 @@ import BrandProductionCards from './components/BrandProductionCards';
 import HowToOrder from './components/HowToOrder';
 import PortfolioGallery from './components/PortfolioGallery';
 import Footer from './components/Footer';
-import AdminDashboard from './components/AdminDashboard';
+import AdminAuthGate from './components/AdminAuthGate';
 
 export default function App() {
-  if (window.location.pathname === '/admin') return <AdminDashboard />;
+  if (window.location.pathname === '/admin') return <AdminAuthGate />;
   return (
     <div className="min-h-screen bg-white text-slate-900 flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-slate-900 selection:text-white">
       {/* Fixed Sticky Header Navigation */}
