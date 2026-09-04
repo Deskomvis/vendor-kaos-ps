@@ -1,5 +1,4 @@
-import { MapPin, Clock, Phone, Mail, ShieldCheck, Instagram, Facebook } from 'lucide-react';
-import { WHATSAPP_CONFIG } from '../data/content';
+import { MapPin, Clock, Mail, ShieldCheck, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -81,26 +80,15 @@ export default function Footer() {
 
           {/* Contact & Workshop Address */}
           <div className="space-y-3">
-            <h3 className="text-xs font-bold text-white uppercase tracking-wider">Kontak &amp; Alamat</h3>
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider">Alamat</h3>
             <div className="space-y-2.5 text-xs text-slate-400">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-slate-300 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Jl. Kreatif Sablon No. 88, Jakarta Selatan</span>
+                <span>Jl. Raya Cibeber, Sirnagalih, Kec. Cilaku, Kabupaten Cianjur, Jawa Barat 43285</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-slate-300 shrink-0" aria-hidden="true" />
                 <span>Senin - Sabtu: 08.00 - 21.00 WIB</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" aria-hidden="true" />
-                <a 
-                  href={`https://wa.me/${WHATSAPP_CONFIG.phoneNumber}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition-colors font-medium font-mono"
-                >
-                  {WHATSAPP_CONFIG.formattedNumber}
-                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-slate-300 shrink-0" aria-hidden="true" />
