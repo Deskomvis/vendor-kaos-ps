@@ -4,7 +4,7 @@ import { getSiteSettings } from '../data/siteSettings';
 
 export default function Hero() {
   const settings = getSiteSettings();
-  const whatsappUrl = `https://wa.me/${settings.whatsappNumber || WHATSAPP_CONFIG.phoneNumber}?text=${encodeURIComponent(WHATSAPP_CONFIG.defaultMessage)}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodeURIComponent(WHATSAPP_CONFIG.defaultMessage)}`;
   const handleCta = (event: React.MouseEvent<HTMLAnchorElement>) => { event.preventDefault(); window.open(`https://wa.me/${getNextWhatsAppNumber()}?text=${encodeURIComponent(WHATSAPP_CONFIG.defaultMessage)}`, '_blank', 'noopener,noreferrer'); };
   return (
     <section className="relative isolate overflow-hidden bg-neutral-950 text-white" aria-labelledby="hero-title">
