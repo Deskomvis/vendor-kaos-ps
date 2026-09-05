@@ -11,9 +11,10 @@ export const WHATSAPP_CONFIG = {
 export const WHATSAPP_ROTATOR_NUMBERS = ['6282113333354', '6285724603103', '6285793800383', '6287775121412', '6287740991337'];
 const WHATSAPP_ROTATOR_KEY = 'gudang-planet-whatsapp-rotator-index';
 export function getNextWhatsAppNumber() {
+  const configuredNumbers: string[] = (() => { try { return JSON.parse(localStorage.getItem('gudang-planet-whatsapp-rotator-numbers') || 'null') || WHATSAPP_ROTATOR_NUMBERS; } catch { return WHATSAPP_ROTATOR_NUMBERS; } })();
   const current = Number.parseInt(localStorage.getItem(WHATSAPP_ROTATOR_KEY) || '0', 10) || 0;
-  localStorage.setItem(WHATSAPP_ROTATOR_KEY, String((current + 1) % WHATSAPP_ROTATOR_NUMBERS.length));
-  const number = WHATSAPP_ROTATOR_NUMBERS[current % WHATSAPP_ROTATOR_NUMBERS.length];
+  localStorage.setItem(WHATSAPP_ROTATOR_KEY, String((current + 1) % configuredNumbers.length));
+  const number = configuredNumbers[current % configuredNumbers.length];
   const hitKey = 'gudang-planet-whatsapp-rotator-hits';
   const hits = JSON.parse(localStorage.getItem(hitKey) || '{}');
   hits[number] = (hits[number] || 0) + 1;
