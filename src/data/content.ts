@@ -13,7 +13,12 @@ const WHATSAPP_ROTATOR_KEY = 'gudang-planet-whatsapp-rotator-index';
 export function getNextWhatsAppNumber() {
   const current = Number.parseInt(localStorage.getItem(WHATSAPP_ROTATOR_KEY) || '0', 10) || 0;
   localStorage.setItem(WHATSAPP_ROTATOR_KEY, String((current + 1) % WHATSAPP_ROTATOR_NUMBERS.length));
-  return WHATSAPP_ROTATOR_NUMBERS[current % WHATSAPP_ROTATOR_NUMBERS.length];
+  const number = WHATSAPP_ROTATOR_NUMBERS[current % WHATSAPP_ROTATOR_NUMBERS.length];
+  const hitKey = 'gudang-planet-whatsapp-rotator-hits';
+  const hits = JSON.parse(localStorage.getItem(hitKey) || '{}');
+  hits[number] = (hits[number] || 0) + 1;
+  localStorage.setItem(hitKey, JSON.stringify(hits));
+  return number;
 }
 
 export const TSHIRT_COLORS: TShirtColor[] = [
