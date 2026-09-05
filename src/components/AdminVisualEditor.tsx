@@ -1,0 +1,9 @@
+import { useState } from 'react';
+import { Edit3, Eye, LayoutDashboard } from 'lucide-react';
+import Navbar from './Navbar'; import Hero from './Hero'; import BrandIntro from './BrandIntro'; import OrderForm from './OrderForm'; import ServiceComparison from './ServiceComparison'; import BrandProductionCards from './BrandProductionCards'; import HowToOrder from './HowToOrder'; import PortfolioGallery from './PortfolioGallery'; import ClientProof from './ClientProof'; import Footer from './Footer'; import FullContentEditor from './FullContentEditor';
+
+export default function AdminVisualEditor() {
+  const [preview, setPreview] = useState(false);
+  if (preview) return <div className="min-h-screen bg-white"><div className="sticky top-0 z-[60] flex items-center justify-between bg-red-700 px-4 py-3 text-sm font-bold text-white"><span className="inline-flex items-center gap-2"><Eye className="h-4 w-4" /> Preview landing page</span><button onClick={() => setPreview(false)} className="rounded-lg bg-white px-3 py-2 text-red-700">Kembali ke editor</button></div><div className="font-['Plus_Jakarta_Sans',sans-serif]"><Navbar /><main><Hero /><BrandIntro /><OrderForm /><ServiceComparison /><BrandProductionCards /><HowToOrder /><PortfolioGallery /><ClientProof /></main><Footer /></div></div>;
+  return <div className="relative"><button type="button" onClick={() => setPreview(true)} className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-neutral-950 px-5 py-3 text-sm font-bold text-white shadow-xl"><Eye className="h-4 w-4" /> Preview landing page</button><div className="flex items-center gap-2 border-b border-neutral-200 bg-white px-5 py-3 text-sm font-bold text-neutral-950"><LayoutDashboard className="h-4 w-4" /> Editor visual landing page <span className="ml-auto inline-flex items-center gap-1 text-xs text-neutral-500"><Edit3 className="h-3.5 w-3.5" /> Pilih section di panel editor</span></div><FullContentEditor /></div>;
+}
