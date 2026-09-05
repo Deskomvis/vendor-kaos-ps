@@ -1,9 +1,12 @@
+import { useEffect, useState } from 'react';
 import { ArrowRight, CheckCircle2, MessageCircle, Sparkles } from 'lucide-react';
 import { getNextWhatsAppNumber, WHATSAPP_CONFIG } from '../data/content';
 import { getSiteSettings } from '../data/siteSettings';
+import { supabase } from '../lib/supabase';
 
 export default function Hero() {
-  const settings = getSiteSettings();
+  const [settings, setSettings] = useState(getSiteSettings());
+  useEffect(() => { if (!supabase) return; supabase.from('site_sections').select('content').eq('id', 'hero').maybeSingle().then(({ data }) => { if (data?.content) setSettings((current) => ({ ...current, ...data.content })); }); }, []);
   const whatsappUrl = `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${encodeURIComponent(WHATSAPP_CONFIG.defaultMessage)}`;
   const handleCta = (event: React.MouseEvent<HTMLAnchorElement>) => { event.preventDefault(); window.open(`https://wa.me/${getNextWhatsAppNumber()}?text=${encodeURIComponent(WHATSAPP_CONFIG.defaultMessage)}`, '_blank', 'noopener,noreferrer'); };
   return (
