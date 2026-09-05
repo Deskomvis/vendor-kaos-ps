@@ -7,7 +7,7 @@ const defaults = ['hero','brand-intro','order-form','services','pricing','promot
 
 export default function FullContentEditor() {
   const [sections, setSections] = useState<Section[]>([]); const [selected, setSelected] = useState('hero'); const [status, setStatus] = useState(''); const [loading, setLoading] = useState(true);
-  useEffect(() => { if (!supabase) return; supabase.from('site_sections').select('*').order('sort_order').then(({ data }) => { setSections((data as Section[]) || []); setLoading(false); }); }, []);
+  useEffect(() => { if (!supabase) return; supabase.from('site_sections').select('*').order('sort_order').then(({ data }) => { setSections((data && data.length ? data : defaults.map((id, i) => ({ id, title: id.replace('-', ' '), content: {}, image_url: null, sort_order: i + 1, is_visible: true }))) as Section[]); setLoading(false); }); }, []);
   const current = sections.find((section) => section.id === selected); const update = (changes: Partial<Section>) => setSections((items) => items.map((item) => item.id === selected ? { ...item, ...changes } : item));
   const save = async () => { if (!supabase || !current) return; const { error } = await supabase.from('site_sections').upsert({ ...current, updated_at: new Date().toISOString() }); setStatus(error ? error.message : 'Tersimpan di Supabase'); setTimeout(() => setStatus(''), 2500); };
   if (loading) return <main className="grid min-h-screen place-items-center bg-neutral-100">Memuat konten…</main>;
